@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\GroupByRepository;
+use App\Repositories\Interfaces\GroupByRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            GroupByRepositoryInterface::class,
+            GroupByRepository::class,
+        );
     }
 
     /**

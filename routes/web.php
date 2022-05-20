@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::post('/', [\App\Http\Controllers\GroupByController::class, 'group']);
+Route::get('/', function() {
+    return 'This is a test app. Please read the readme file!';
+});
+Route::post('group', [\App\Http\Controllers\GroupByController::class, 'group']);
