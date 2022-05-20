@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/', [\App\Http\Controllers\GroupByController::class, 'test']);
+Route::post('/', [\App\Http\Controllers\GroupByController::class, 'group']);
