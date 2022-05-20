@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use App\Models\Output;
 use App\Services\GroupBy;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class GroupByController extends Controller
 {
     public function group(Request $request)
     {
-        return GroupBy::test();
+        return Car::all();
         $validator = Validator::make($request->all(), [
             'table' => ['required', 'string'],
             'columns' => ['required', 'array'],
